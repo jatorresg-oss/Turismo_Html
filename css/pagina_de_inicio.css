@@ -1,137 +1,165 @@
-
-:root {
-  --verde: #173f35;
-  --verde-claro: #2f7254;
-  --amarillo: #f0b84b;
-  --crema: #f8f4e9;
-  --tinta: #23332d;
-  --blanco: #fffdf8;
-}
-
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  color: var(--tinta);
-  background: var(--crema);
-  font-family: 'DM Sans', sans-serif;
+  background-color: #faf7f2;
+  color: #2b2b2b;
   line-height: 1.6;
 }
 
-h1, h2, h3, p {
-  margin-top: 0;
+h2 {
+  color: #7a1f1f;
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin-bottom: .4rem;
 }
 
-h1, h2, h3 {
+h1,h2,h3 {
   font-family: 'Playfair Display', serif;
   line-height: 1.15;
 }
 
-.header {
-  align-items: center;
-  background: var(--blanco);
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 6vw;
-  gap: 2rem;
+h2 + p {
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-.logo, .nav ul, .experiencias-lista {
+.header {
   align-items: center;
+  background-color: #7a1f1f;
+  color: #fff;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 .logo {
-  gap: .65rem;
+  align-items: center;
+  display: flex;
+  gap: .5rem;
 }
 
 .logo h1 {
   font-size: 1.45rem;
-  margin: 0;
 }
 
 .logo strong {
-  color: var(--verde-claro);
+  color: #2f7254;
 }
 
 .logo-icono {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .nav ul {
-  gap: 1.4rem;
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.nav a {
-  color: var(--tinta);
-  font-weight: 700;
+.nav > ul > li > a {
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: .3rem .2rem;
   text-decoration: none;
+  transition: border-color .3s ease, color .3s ease;
 }
 
-.nav a:hover, .nav .activo {
-  color: var(--verde-claro);
+.nav > ul > li > a:hover,
+.nav > ul > li > a.activo {
+  border-bottom-color: #e8c07d;
+  color: #e8c07d;
 }
 
 .hero {
   align-items: center;
-  background: linear-gradient(90deg, rgba(15, 42, 34, .9), rgba(15, 42, 34, .28)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600') center/cover;
-  color: var(--blanco);
+  background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200') center/cover no-repeat;
+  color: #fff;
   display: flex;
   min-height: 520px;
-  padding: 5rem 8vw;
+  padding: 6rem 2rem;
+  text-align: center;
 }
 
 .hero-contenido {
+  animation: aparecer 1.2s ease-out;
   max-width: 650px;
 }
 
-.hero h2 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  margin-bottom: 1rem;
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.hero-contenido h2 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: .8rem;
+}
+
+.hero-contenido p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
-  background: var(--amarillo);
-  border-radius: 3px;
-  color: var(--tinta);
+  background-color: #e8c07d;
+  border-radius: 30px;
+  color: #3a2a1a;
   display: inline-block;
-  font-weight: 700;
-  padding: .85rem 1.25rem;
+  font-weight: bold;
+  padding: .7rem 1.6rem;
   text-decoration: none;
+  transition: transform .3s ease, background-color .3s ease;
 }
 
-.destinos, .resena, .experiencias, .dato-clima {
+.btn:hover {
+  background-color: #d8a85a;
+  transform: scale(1.08);
+}
+
+.destinos {
   margin: 0 auto;
   max-width: 1180px;
-  padding: 5rem 6vw;
-}
-
-.destinos h2, .resena h2, .experiencias h2, .dato-clima h2 {
-  color: var(--verde);
-  font-size: 2.2rem;
-  margin-bottom: .5rem;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 .destinos-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.5rem;
+  text-align: left;
 }
 
 .tarjeta {
-  background: var(--blanco);
-  box-shadow: 0 8px 24px rgba(35, 51, 45, .08);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+  transform: translateY(-6px);
 }
 
 .tarjeta figure {
@@ -141,7 +169,7 @@ h1, h2, h3 {
 
 .tarjeta img {
   display: block;
-  height: 210px;
+  height: 160px;
   object-fit: cover;
   width: 100%;
 }
@@ -149,86 +177,91 @@ h1, h2, h3 {
 .tarjeta figcaption {
   background: rgba(23, 63, 53, .9);
   bottom: 0;
-  color: var(--blanco);
+  color: #7a1f1f;
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
+  font-weight: bold;
   left: 0;
-  padding: .65rem 1rem;
+  padding: .6rem 1rem 0;
   position: absolute;
   right: 0;
 }
 
-.tarjeta > p {
-  margin: 0;
-  padding: 1.2rem;
+.tarjeta p {
+  color: #444;
+  font-size: .95rem;
+  padding: .5rem 1rem 1rem;
 }
 
 .resena {
-  background: var(--verde);
-  color: var(--blanco);
-  max-width: none;
+  background: #173f35;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 3rem 2rem;
 }
 
 .resena h2 {
-  color: var(--amarillo);
+  color: #f0b84b;
 }
 
 .resena-contenido {
   margin: 2rem auto 0;
   max-width: 1080px;
+  overflow: auto;
 }
 
 .img-flotante {
+  border-radius: 8px;
   float: left;
   height: 190px;
-  margin: 0 2rem 1rem 0;
+  margin: 0 1.5rem 1rem 0;
   object-fit: cover;
-  width: 280px;
+  width: 260px;
+}
+
+.experiencias {
+  background-color: #f1e6d6;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 .experiencias-lista {
   align-items: stretch;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .experiencia-item {
-  border-left: 4px solid var(--amarillo);
-  flex: 1;
-  padding: .5rem 1rem;
+  background: #fff;
+  border-left: 4px solid #f0b84b;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+  flex: 1 1 200px;
+  max-width: 240px;
+  padding: 1.5rem;
 }
 
 .experiencia-item h3 {
-  color: var(--verde-claro);
-  font-size: 1.35rem;
+  color: #7a1f1f;
+  margin-bottom: .5rem;
 }
 
 .dato-clima {
-  background: #e6eee3;
+  background-color: #e8c07d;
+  margin: 2rem 0;
   max-width: none;
-}
-
-.footer {
-  background: #102e28;
-  color: var(--blanco);
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 6vw;
-}
-
-.footer p {
-  margin: 0;
+  padding: 2rem;
+  text-align: center;
 }
 
 @media (max-width: 850px) {
-  .header, .footer {
+  .header {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .nav ul {
-    flex-wrap: wrap;
   }
 
   .destinos-grid {
@@ -244,10 +277,18 @@ h1, h2, h3 {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+  .header {
+    gap: 1rem;
+  }
+
   .hero {
     min-height: 460px;
-    padding: 4rem 6vw;
+    padding: 4rem 2rem;
+  }
+
+  .hero-contenido h2 {
+    font-size: 1.8rem;
   }
 
   .destinos-grid {
@@ -263,274 +304,5 @@ h1, h2, h3 {
     height: 220px;
     margin: 0 0 1rem;
     width: 100%;
-  }
-}
-/* ==========================================================
-   SELECTOR UNIVERSAL (*)
-   ========================================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-body {
-  color: #2b2b2b;
-  background-color: #faf7f2;
-  line-height: 1.6;
-}
-
-h2 {
-  font-size: 1.8rem;
-  color: #7a1f1f;
-  margin-bottom: 0.4rem;
-}
-
-/* SELECTOR DE HERMANO ADYACENTE (+)
-   Aplica solo al párrafo que va INMEDIATAMENTE después de un h2 */
-h2 + p {
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-/* SELECTOR DE HERMANOS GENERALES (~)
-   Aplica a TODOS los párrafos hermanos posteriores a un h2 dentro de .resena-contenido */
-.resena-contenido h2 ~ p {
-  text-indent: 1rem;
-}
-
-/* ==========================================================
-   ENCABEZADO
-   ========================================================== */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #7a1f1f;
-  color: #fff;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo-icono {
-  font-size: 1.6rem;
-}
-
-/* NAV con FLEXBOX (técnica de layout #1) */
-.nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-/* SELECTOR DE HIJO DIRECTO (>)
-   Solo afecta a los <a> que son hijos directos de <li>, dentro del nav */
-.nav > ul > li > a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.3rem 0.2rem;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease, color 0.3s ease; /* TRANSICIÓN */
-}
-
-.nav > ul > li > a:hover,
-.nav > ul > li > a.activo {
-  border-bottom: 2px solid #e8c07d;
-  color: #e8c07d;
-}
-
-/* ==========================================================
-   HERO con ANIMACIÓN
-   ========================================================== */
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-              url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200') center/cover no-repeat;
-  color: #fff;
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.hero-contenido {
-  animation: aparecer 1.2s ease-out; /* ANIMACIÓN (requisito) */
-}
-
-@keyframes aparecer {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-contenido h2 {
-  color: #fff;
-  font-size: 2.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.hero-contenido p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-/* Botón con TRANSICIÓN al pasar el mouse */
-.btn {
-  display: inline-block;
-  background-color: #e8c07d;
-  color: #3a2a1a;
-  text-decoration: none;
-  padding: 0.7rem 1.6rem;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* TRANSICIÓN (requisito) */
-}
-
-.btn:hover {
-  background-color: #d8a85a;
-  transform: scale(1.08);
-}
-
-/* ==========================================================
-   DESTINOS con GRID (técnica de layout #2)
-   ========================================================== */
-.destinos {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.destinos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  text-align: left;
-}
-
-.tarjeta {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tarjeta:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.18);
-}
-
-.tarjeta img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
-}
-
-.tarjeta figcaption {
-  font-weight: bold;
-  padding: 0.6rem 1rem 0;
-  color: #7a1f1f;
-}
-
-.tarjeta p {
-  padding: 0.5rem 1rem 1rem;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* ==========================================================
-   RESEÑA con FLOAT (técnica de layout #3)
-   ========================================================== */
-.resena {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.resena-contenido {
-  overflow: auto; /* limpia el float para que el fondo lo respete */
-}
-
-.img-flotante {
-  float: left;               /* FLOAT (requisito) */
-  width: 260px;
-  margin: 0 1.5rem 1rem 0;
-  border-radius: 8px;
-}
-
-/* ==========================================================
-   EXPERIENCIAS con FLEX
-   ========================================================== */
-.experiencias {
-  background-color: #f1e6d6;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
-.experiencias-lista {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.experiencia-item {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1 1 200px;
-  max-width: 240px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.experiencia-item h3 {
-  color: #7a1f1f;
-  margin-bottom: 0.5rem;
-}
-
-/* ==========================================================
-   ASIDE y FOOTER
-   ========================================================== */
-.dato-clima {
-  background-color: #e8c07d;
-  padding: 2rem;
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.footer {
-  background-color: #2b2b2b;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-/* ==========================================================
-   RESPONSIVE BÁSICO
-   ========================================================== */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .hero-contenido h2 {
-    font-size: 1.8rem;
-  }
-  .img-flotante {
-    float: none;
-    width: 100%;
-    margin: 0 0 1rem 0;
   }
 }
