@@ -302,3 +302,11 @@ h2 + p {
     width: 100%;
   }
 }
+
+.ReservaCocuy {
+  color: #f70808;
+  font-size: 1.1rem;
+  font-weight: 10%;
+  align-content: center;
+  text-decoration: underline;
+}
