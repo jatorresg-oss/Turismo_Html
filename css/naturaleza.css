@@ -79,10 +79,12 @@ h2 + p {
   color: #e8c07d;
 }
 
-.hero {
+.naturaleza-main {
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../resources/paramos4k.jpg") center/cover
+      no-repeat;
   color: #fff;
   display: flex;
   min-height: 520px;
@@ -90,15 +92,23 @@ h2 + p {
   text-align: center;
 }
 
-.hero-contenido {
+.naturaleza-main .naturaleza-titulo {
+  color: #ffffff;
   animation: aparecer 2.5s ease-out;
   max-width: 650px;
+  font-size: 2.3rem;
+}
+
+.naturaleza-main .naturaleza-titulo + p{
+  animation: aparecer 2.5s ease-out;
+  max-width: 650px;
+  color: #f2fb44dc;
 }
 
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(30px);
   }
 
   to {
@@ -257,4 +267,9 @@ h2 + p {
   max-width: none;
   padding: 2rem;
   text-align: center;
+}
+.frase-final {
+  color: #0cdc7b;
+  text-align: center;
+  text-size-adjust: ;
 }
