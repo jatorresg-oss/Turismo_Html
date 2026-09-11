@@ -12,7 +12,7 @@ body {
 }
 
 h2 {
-  color: #7a1f1f;
+  color: #15eb0d;
   font-size: 1.8rem;
   line-height: 1.15;
   margin-bottom: .4rem;
@@ -24,7 +24,7 @@ h1,h2,h3 {
 }
 
 h2 + p {
-  color: #fad105;
+  color: #f2fb44dc;
   margin-bottom: 1.5rem;
 }
 
@@ -50,7 +50,7 @@ h2 + p {
 }
 
 .logo strong {
-  color: #2f7254;
+  color: #4fcc7d;
 }
 
 .logo-icono {
@@ -91,24 +91,24 @@ h2 + p {
 }
 
 .hero-contenido {
-  animation: aparecer 1.2s ease-out;
+  animation: aparecer 3.6s ease-out;
   max-width: 650px;
 }
 
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(500px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 
 .hero-contenido h2 {
-  color: #fff;
+  color: #4af21b;
   font-size: 2.4rem;
   margin-bottom: .8rem;
 }
@@ -130,7 +130,8 @@ h2 + p {
 }
 
 .btn:hover {
-  background-color: #d8a85a;
+  background-color: #33f017;
+  color:blue;
   transform: scale(1.08);
 }
 
@@ -139,6 +140,7 @@ h2 + p {
   max-width: 1180px;
   padding: 3rem 2rem;
   text-align: center;
+  
 }
 
 .destinos-grid {
@@ -150,7 +152,7 @@ h2 + p {
 }
 
 .tarjeta {
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
   overflow: hidden;
@@ -158,8 +160,8 @@ h2 + p {
 }
 
 .tarjeta:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
-  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(55, 255, 58, 1);
+  transform: translateY(-60px);
 }
 
 .tarjeta figure {
@@ -175,9 +177,9 @@ h2 + p {
 }
 
 .tarjeta figcaption {
-  background: rgba(23, 63, 53, .9);
+  background: rgba(53, 132, 112, 0.6);
   bottom: 0;
-  color: #7a1f1f;
+  color: #24e431;
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: bold;
@@ -188,7 +190,7 @@ h2 + p {
 }
 
 .tarjeta p {
-  color: #444;
+  color: #444444;
   font-size: .95rem;
   padding: .5rem 1rem 1rem;
 }
@@ -196,19 +198,18 @@ h2 + p {
 .resena {
   background: #173f35;
   color: #fff;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   max-width: 900px;
   padding: 3rem 2rem;
 }
 
 .resena h2 {
-  color: #f0b84b;
+  color: #4af21b;
 }
 
 .resena-contenido {
   margin: 2rem auto 0;
   max-width: 1080px;
-  overflow: auto;
 }
 
 .img-flotante {
@@ -221,7 +222,7 @@ h2 + p {
 }
 
 .experiencias {
-  background-color: #10c1a0;
+  background-color: #173f35;
   padding: 3rem 2rem;
   text-align: center;
 }
@@ -231,7 +232,7 @@ h2 + p {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 1.5rem;
 }
 
@@ -246,63 +247,14 @@ h2 + p {
 }
 
 .experiencia-item h3 {
-  color: #7a1f1f;
+  color: #010101;
   margin-bottom: .5rem;
 }
 
 .dato-clima {
-  background-color: #0762f5;
+  background-color: #173f35;
   margin: 2rem 0;
   max-width: none;
   padding: 2rem;
   text-align: center;
-}
-
-@media (max-width: 850px) {
-  .header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .destinos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .experiencias-lista {
-    flex-wrap: wrap;
-  }
-
-  .experiencia-item {
-    flex-basis: 40%;
-  }
-}
-
-@media (max-width: 600px) {
-  .header {
-    gap: 1rem;
-  }
-
-  .hero {
-    min-height: 460px;
-    padding: 4rem 2rem;
-  }
-
-  .hero-contenido h2 {
-    font-size: 1.8rem;
-  }
-
-  .destinos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .experiencia-item {
-    flex-basis: 100%;
-  }
-
-  .img-flotante {
-    float: none;
-    height: 220px;
-    margin: 0 0 1rem;
-    width: 100%;
-  }
 }
