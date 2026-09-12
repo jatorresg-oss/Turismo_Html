@@ -12,21 +12,19 @@ body {
 }
 
 h2 {
-  color: #15eb0d;
+  color: #173f35;
   font-size: 1.8rem;
   line-height: 1.15;
   margin-bottom: 0.4rem;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
   line-height: 1.15;
 }
 
 h2 + p {
-  color: #f2fb44dc;
+  color: #000000;
   margin-bottom: 1.5rem;
 }
 
@@ -131,6 +129,46 @@ h2 + p {
   font-weight: 1000;
   text-align: center;
   text-decoration: underline;
+}
+
+.N_Titulo section{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+.N_Titulo {
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.N_Text section{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+.N_Text {
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.N_Text > section > img{
+  width:  800px;
+}
+
+.main {
+  margin: 0 10% 0 10%;
+  background-color: rgba(186, 184, 184, 0.306);
+  align-items: center;
 }
 
 .frase-final {
