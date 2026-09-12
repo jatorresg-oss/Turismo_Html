@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -15,11 +15,13 @@ h2 {
   color: #15eb0d;
   font-size: 1.8rem;
   line-height: 1.15;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
-h1,h2,h3 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
   line-height: 1.15;
 }
 
@@ -37,12 +39,17 @@ h2 + p {
   gap: 2rem;
   justify-content: space-between;
   padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
   align-items: center;
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .logo h1 {
@@ -68,9 +75,11 @@ h2 + p {
   border-bottom: 2px solid transparent;
   color: #fff;
   font-weight: 600;
-  padding: .3rem .2rem;
+  padding: 0.3rem 0.2rem;
   text-decoration: none;
-  transition: border-color .3s ease, color .3s ease;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .nav > ul > li > a:hover,
@@ -83,8 +92,7 @@ h2 + p {
   align-items: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("../resources/paramos4k.jpg") center/cover
-      no-repeat;
+    url("../resources/paramos4k.jpg") center/cover no-repeat;
   color: #fff;
   display: flex;
   min-height: 520px;
@@ -99,7 +107,7 @@ h2 + p {
   font-size: 2.3rem;
 }
 
-.naturaleza-main .naturaleza-titulo + p{
+.naturaleza-main .naturaleza-titulo + p {
   animation: aparecer 2.5s ease-out;
   max-width: 650px;
   color: #f2fb44dc;
@@ -120,7 +128,7 @@ h2 + p {
 .hero-contenido h2 {
   color: #4af21b;
   font-size: 2.4rem;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-contenido p {
@@ -134,14 +142,16 @@ h2 + p {
   color: #3a2a1a;
   display: inline-block;
   font-weight: bold;
-  padding: .7rem 1.6rem;
+  padding: 0.7rem 1.6rem;
   text-decoration: none;
-  transition: transform .3s ease, background-color .3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #33f017;
-  color:blue;
+  color: blue;
   transform: scale(1.08);
 }
 
@@ -150,7 +160,6 @@ h2 + p {
   max-width: 1180px;
   padding: 3rem 2rem;
   text-align: center;
-  
 }
 
 .destinos-grid {
@@ -164,9 +173,11 @@ h2 + p {
 .tarjeta {
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform .3s ease, box-shadow .3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .tarjeta:hover {
@@ -190,19 +201,19 @@ h2 + p {
   background: rgba(53, 132, 112, 0.6);
   bottom: 0;
   color: #24e431;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.3rem;
   font-weight: bold;
   left: 0;
-  padding: .6rem 1rem 0;
+  padding: 0.6rem 1rem 0;
   position: absolute;
   right: 0;
 }
 
 .tarjeta p {
   color: #444444;
-  font-size: .95rem;
-  padding: .5rem 1rem 1rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem 1rem;
 }
 
 .resena {
@@ -250,7 +261,7 @@ h2 + p {
   background: #fff;
   border-left: 4px solid #f0b84b;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   flex: 1 1 200px;
   max-width: 240px;
   padding: 1.5rem;
@@ -258,7 +269,7 @@ h2 + p {
 
 .experiencia-item h3 {
   color: #010101;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .dato-clima {
@@ -271,5 +282,5 @@ h2 + p {
 .frase-final {
   color: #0cdc7b;
   text-align: center;
-  text-size-adjust: ;
+  text-size-adjust:;
 }
