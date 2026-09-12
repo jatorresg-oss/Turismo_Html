@@ -271,5 +271,5 @@ h2 + p {
 .frase-final {
   color: #0cdc7b;
   text-align: center;
-  text-size-adjust: ;
+  text-size-adjust: auto;
 }

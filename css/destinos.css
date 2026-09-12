@@ -97,10 +97,23 @@ h2 + p {
   max-width: 650px;
 }
 
+.hero .hero-contenido .hero-titulo {
+  color: #ffffff;
+}
+
+.hero-contenido {
+  animation: aparecer 2.5s ease-out;
+  max-width: 650px;
+}
+
+.hero .hero-contenido .hero-titulo {
+  color: #ffffff;
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(30px);
   }
 
   to {
