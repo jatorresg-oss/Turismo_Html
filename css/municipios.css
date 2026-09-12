@@ -122,12 +122,33 @@ h2 + p {
   }
 }
 
-.Tunja {
+.M_Titulo {
   text-align: center;
 }
 
-.Tunja img{
+.M_Titulo img{
   width: 800px;
+}
+
+.M_Text section{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+.M_Text {
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.main {
+  margin: 0 10% 0 10%;
+  background-color: rgba(146, 146, 146, 0.474);
+  align-items: center;
 }
 
 .ReservaCocuy {
