@@ -88,13 +88,12 @@ h2 + p {
   align-items: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("../resources/paipa.jpg") center/cover no-repeat;
+    url("../resources/comida_1.jpg") center/cover no-repeat;
   color: #fff;
   display: flex;
   min-height: 520px;
   padding: 6rem 2rem;
   text-align: center;
-  justify-content: center;
 }
 
 .hero-contenido {
@@ -102,10 +101,14 @@ h2 + p {
   max-width: 650px;
 }
 
+.hero .hero-contenido .hero-titulo {
+  color: #ffffff;
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(30px);
   }
 
   to {

@@ -88,13 +88,13 @@ h2 + p {
   align-items: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("../resources/boyaca_1_re.jpg") center/cover no-repeat;
+    url("../resources/Gemini_Generated_Image_7goow47goow47goo.jpg") center/cover no-repeat;
   color: #fff;
   display: flex;
   min-height: 520px;
   padding: 6rem 2rem;
   text-align: center;
-  justify-content: center;
+
 }
 
 .hero-contenido {
@@ -102,10 +102,23 @@ h2 + p {
   max-width: 650px;
 }
 
+.hero .hero-contenido .hero-titulo {
+  color: #ffffff;
+}
+
+.hero-contenido {
+  animation: aparecer 2.5s ease-out;
+  max-width: 650px;
+}
+
+.hero .hero-contenido .hero-titulo {
+  color: #ffffff;
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(30px);
   }
 
   to {
