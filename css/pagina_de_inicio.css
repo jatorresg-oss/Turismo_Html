@@ -177,7 +177,7 @@ h2 + p {
 }
 
 .tarjeta:hover {
-  box-shadow: 0 8px 16px rgba(55, 255, 58, 1);
+  box-shadow: 0 8px 16px rgb(3, 247, 35);
   transform: translateY(-60px);
 }
 
